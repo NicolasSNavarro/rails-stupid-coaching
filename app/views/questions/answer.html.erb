@@ -1,0 +1,30 @@
+<div class="card m-3" style="width: 18rem;">
+  <img src="https://imgs.search.brave.com/HQ9ewqehbRWG1vOMhz_ksotpwzR-o4RMfGomLOhK5MA/rs:fit:632:225:1/g:ce/aHR0cHM6Ly90c2U0/Lm1tLmJpbmcubmV0/L3RoP2lkPU9JUC54/NzdsOHVsUjNEaXdR/cml6emFpWVBBSGFG/aiZwaWQ9QXBp">
+  <div class="card-body">
+    <h5 class="card-title"><h1> <%= @input %> </h1></h5>
+    <p class="card-text"><h2> - You</h2></p>
+  </div>
+</div>
+
+<div class="card m-3" style="width: 18rem;">
+  <img src="https://imgs.search.brave.com/iRCdA1wtWLt9HMna-VZE97mIephuCZ6ye4faw1Exb-4/rs:fit:800:846:1/g:ce/aHR0cHM6Ly90aHVt/YnMuZHJlYW1zdGlt/ZS5jb20vYi9jYXQt/dHJhaW5pbmctZHVt/YmJlbGxzLXNlYS1i/ZWlnZS1hdGhsZXRl/LXNwb3J0cy1nb2xk/LW1lZGFsLWRvaW5n/LWV4ZXJjaXNlcy13/b29kZW4tZW1iYW5r/bWVudC0xODEyNDk3/MjUuanBn" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title"><h1> <%=
+    def coach_answer(your_message)
+      if your_message == @STOP_MESSAGE || your_message == @STOP_MESSAGE.upcase
+        "Great!"
+      elsif your_message.end_with?("?")
+        "Silly question, get dressed and go to work!"
+      else
+        "I don't care, get dressed and go to work!"
+      end
+    end
+
+    coach_answer(@input)
+    %> </h1></h5>
+
+    <p class="card-text"><h2> - Coach</h2></p>
+  </div>
+</div>
+
+<a href="/ask">Ask a new Question!</a>
